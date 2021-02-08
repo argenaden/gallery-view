@@ -41,7 +41,7 @@
           'https://user-images.githubusercontent.com/69447666/107151778-be69ed00-69a7-11eb-8fcb-9eea9e3629e4.jpg',
           'https://user-images.githubusercontent.com/69447666/107151777-bd38c000-69a7-11eb-93c2-98bc2a19eba5.jpg',
           'https://user-images.githubusercontent.com/69447666/107151776-bc079300-69a7-11eb-9de6-8f1f5cc60ec5.jpg',
-          'https://user-images.githubusercontent.com/69447666/107151778-be69ed00-69a7-11eb-8fcb-9eea9e3629e4.jpg'
+          'https://user-images.githubusercontent.com/69447666/107151776-bc079300-69a7-11eb-9de6-8f1f5cc60ec5.jpg',
         ],
         visible: false,
         index: 0,
@@ -64,12 +64,12 @@
 
 <style>
   #app {
-    margin: 10%;
+    margin: 15%;
   }
 
   .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 4fr));
     grid-gap: 50px;
     align-items: center;
     justify-content: center;
