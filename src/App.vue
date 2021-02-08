@@ -1,10 +1,6 @@
 <template>
-  <div id="app"
-    @focusout="isOutside"
-    tabindex="0"
-    style="outline:none;"
-  >
-    <div class="gallery">
+  <div id="app">
+    <div class="gallery" v-click-outside="outside" @click="inside">
       <div
         v-for="(img, idx) in imgs"
         :key="idx"
@@ -26,7 +22,7 @@
 
 <script>
   import VueEasyLightbox from 'vue-easy-lightbox'
-  import say from 'sweetalert';
+  import say from 'sweetalert'
 
   export default {
     name: 'App',
@@ -45,18 +41,25 @@
         ],
         visible: false,
         index: 0,
-        messages: "Press image"
+        messages: "Press image",
+        first: false
       }
     },
     methods: {
       show(index) {
         this.index = index
         this.visible = true
+        this.first = false
       },
-      isOutside(){
-        if(!this.visible){
+      outside() {
+         console.log('clicked outside');
+         if(!this.first){
             say(this.messages);
-        }
+            this.first = true
+         }
+      },
+      inside() {
+        console.log('clicked inside!');
       }
     }
   }
